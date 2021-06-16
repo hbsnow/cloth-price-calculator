@@ -1,0 +1,70 @@
+{
+  "name": "template-nextjs-tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "TAILWIND_MODE=watch NODE_ENV=development next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "typecheck": "tsc --pretty --noEmit",
+    "format": "prettier --write '**/*.{js,ts,tsx,json}'",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "generate-css-types": "tailwindcss-classnames -i tailwind.config.js -o src/tw.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(js|jsx|ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "next": "11.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tailwindcss": "2.1.4",
+    "tailwindcss-classnames": "2.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.14.6",
+    "@storybook/addon-actions": "6.2.9",
+    "@storybook/addon-essentials": "6.2.9",
+    "@storybook/addon-links": "6.2.9",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/builder-webpack5": "6.2.9",
+    "@storybook/react": "6.2.9",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "11.2.7",
+    "@testing-library/react-hooks": "7.0.0",
+    "@types/jest": "26.0.23",
+    "@types/react": "17.0.11",
+    "@types/tailwindcss": "2.0.5",
+    "@typescript-eslint/eslint-plugin": "4.27.0",
+    "@typescript-eslint/parser": "4.27.0",
+    "autoprefixer": "10.2.6",
+    "babel-jest": "27.0.2",
+    "babel-loader": "8.2.2",
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "6.0.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.0.4",
+    "jest-watch-typeahead": "0.6.4",
+    "lint-staged": "11.0.0",
+    "postcss": "8.3.4",
+    "react-test-renderer": "17.0.2",
+    "typescript": "4.3.2"
+  }
+}
