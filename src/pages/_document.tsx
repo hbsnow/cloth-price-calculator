@@ -8,6 +8,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import { classnames } from "tailwindcss-classnames";
 
 class BaseDocument extends Document {
   static async getInitialProps(
@@ -19,7 +20,14 @@ class BaseDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang="ja">
+      <Html
+        lang="ja"
+        className={classnames(
+          "bg-gradient-to-r",
+          "from-pink-300",
+          "to-yellow-200"
+        )}
+      >
         <Head />
         <body>
           <Main />
