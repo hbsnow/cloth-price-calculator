@@ -14,6 +14,7 @@ const config = {
     {
       files: ["**/*.{ts,tsx}"],
       extends: [
+        "plugin:@next/next/recommended",
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",

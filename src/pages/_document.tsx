@@ -28,7 +28,13 @@ class BaseDocument extends Document {
           "to-yellow-200"
         )}
       >
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&amp;display=swap&amp;text=ClothPriceaul"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
