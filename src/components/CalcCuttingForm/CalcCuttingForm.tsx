@@ -26,7 +26,7 @@ export const CalcCuttingForm = (): JSX.Element => {
     <div
       className={classnames("grid", "gap-2", "grid-flow-row", "auto-rows-max")}
     >
-      <h2>Cutting size</h2>
+      <h2>使用するサイズ</h2>
       <div className={classnames("grid", "gap-4", "grid-cols-2")}>
         <div>
           <Input

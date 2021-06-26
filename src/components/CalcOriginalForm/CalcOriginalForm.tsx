@@ -31,7 +31,7 @@ export const CalcOriginalForm = (): JSX.Element => {
     <div
       className={classnames("grid", "gap-2", "grid-flow-row", "auto-rows-max")}
     >
-      <h2>Original size</h2>
+      <h2>購入時のサイズと価格</h2>
       <div className={classnames("grid", "gap-4", "grid-cols-2")}>
         <div>
           <Input

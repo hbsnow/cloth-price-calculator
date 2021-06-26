@@ -85,15 +85,25 @@ const Page: NextPage = () => {
 
             <div
               className={classnames(
-                "grid",
-                "place-content-center",
+                "flex",
+                "flex-col",
+                "gap-2",
                 "p-4",
                 "bg-white",
                 "rounded-lg",
                 "shadow-md"
               )}
             >
-              <ClacResult />
+              <h2>原価</h2>
+              <div
+                className={classnames(
+                  "grid",
+                  "place-content-center",
+                  "flex-grow"
+                )}
+              >
+                <ClacResult />
+              </div>
             </div>
           </div>
         </div>
