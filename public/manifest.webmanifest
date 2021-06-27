@@ -6,7 +6,7 @@
   "start_url": "/?source=pwa",
   "name": "Cloth Price Calculator",
   "short_name": "Cloth Price Calculator",
-  "description": "Cloth Price Calculator",
+  "description": "生地のサイズから原価を計算するアプリ。",
   "icons": [
     {
       "src": "/icon-192x192.png",
